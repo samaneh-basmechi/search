@@ -1,0 +1,31 @@
+@font-face {
+  font-family: palanquin;
+  src: url('/assets/font/palanquin-regular.ttf');
+}
+
+body{
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  font-family: palanquin , sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

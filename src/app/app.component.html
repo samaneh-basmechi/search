@@ -1,0 +1,47 @@
+<div class="search-container">
+
+  <h1>Search for a username:</h1>
+
+  <div class="input-container">
+    <input name="UserInput"
+           placeholder="Search user ...."
+           type="text"
+           [(ngModel)]="inputValue"
+           (keyup)="searchUser($event)">
+    <button *ngIf="loading" class="loading"></button>
+    <button *ngIf="!loading && inputValue" (click)="clearInput()" class="close-icon clear-input-btn"></button>
+  </div>
+
+  <p class="message" *ngIf="emptyUsersArrayMessage">{{emptyUsersArrayMessage}}</p>
+
+  <div *ngIf="users.length" class="items-list">
+    <ul>
+      <li *ngFor="let user of users;" (click)="$event.stopPropagation();selectUser(user)" class="item">
+        <span [innerHTML]="user.name | bolder:inputValue"></span>
+      </li>
+    </ul>
+  </div>
+
+  <ul>
+    <li class="search-history">
+      <h3>Search history:</h3>
+      <button [disabled]="selectedUsers.length<1" (click)="clearHistory()" class="search-history-clear-btn">
+        Clear search history</button>
+    </li>
+    <ng-container *ngIf="selectedUsers.length; else emptySelectedList">
+      <li *ngFor="let selectedUser of selectedUsers" class="search-history">
+        <span>{{selectedUser.name}}</span>
+        <div class="date-container">
+          <span>{{selectedUser.date |  date: 'yyyy-mm-dd, h:mm a'}}</span>
+          <div (click)="removeSelectedUser(selectedUser)" class="close-icon"></div>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</div>
+
+<ng-template #emptySelectedList>
+  <h3 class="search-history-message"> No users selected.</h3>
+</ng-template>
+
+

@@ -1,0 +1,139 @@
+button{
+  border: unset;
+  background-color: unset;
+}
+
+ul{
+  padding: 0;
+}
+
+.search-container{
+  max-width: 600px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #e2e2e2;
+  margin: auto;
+}
+
+.input-container{
+  position: relative;
+}
+
+input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.loading {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #afa7a74d;
+  border-radius: 50%;
+  border-top-color: gray;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+.clear-input-btn{
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+
+.close-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  opacity: 1;
+}
+
+.close-icon:before, .close-icon:after {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  content: ' ';
+  height: 15px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close-icon:before {
+  transform: rotate(45deg);
+}
+
+.close-icon:after {
+  transform: rotate(-45deg);
+}
+
+.message{
+  color: red;
+}
+
+.items-list {
+  background-color: white;
+  max-height: 200px;
+  overflow: scroll;
+}
+
+.item {
+  color: black;
+  cursor: pointer;
+  line-height: 2.5;
+  padding-left: 15px;
+}
+
+.search-history{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid #c7c6c6;
+  line-height: 3.5;
+}
+
+.search-history-message{
+  text-align: center;
+}
+
+.search-history-clear-btn{
+  text-decoration: #495057;
+  cursor: pointer;
+  align-self: center;
+  border: unset;
+  background-color: unset;
+  font-size: 14px;
+}
+.search-history-clear-btn:hover:not([disabled]) {
+  color: blue;
+}
+
+.date-container{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
