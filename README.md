@@ -1,46 +1,38 @@
-# Upfront test for Frontend
+# ngx-image-cropper-sample
 
-Application Frontend Developer
+## Demo
 
-## Getting Started
-
-Below is an entrance examination we give to our to evaluate their skills.
-
-### Task Description
-
-* Please create a new branch.
-
-* Implement Roboto as the base typo.
-
-* Responsive page design is a minimum and Please implement a fluid page design.
-
-* Use this API to fetch data for a dashboard:
-
-```
-https://skyrim.whipmobility.io/v10/analytic/dashboard/operation/mock?scope=LAST_7_DAYS
-```
-Scope can be: ``` ALL | TODAY | LAST_7_DAYS | LAST_30_DAYS ```
-
-* This is a mock of our dashboard API to obtain statistics.
-
-* Display and format the data using visually appealing charts, and include a dropdown to change scopes.
-
-* After you commit some changes, you can open a pull request.
-
-### Extra points if you use:
-
-- CSS Grid
-- Unit test
-- E2E testing
-- State managment like NGRX,AKITA, NGXS and so on
-- Deploy on cloud
-- Dockerize 
+![til](./src/assets/images/Demo.png)
 
 
-## Authors
+## Demo Link
+https://search-and-acion.netlify.app
 
-* **Mohi Jalili** - *Initial work* - [mohijalili](https://github.com/mohijalili)
 
-## License
+## Usage
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+Go to base directory and 
+
+- Install Project
+
+    ```bash
+    npm install
+    ```
+
+- Start the project
+
+    ```bash
+    npm start
+    ```
+     or
+    ```bash
+    ng serve
+    ```
+## Development server
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
