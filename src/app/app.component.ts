@@ -1,8 +1,8 @@
 import {Component, OnDestroy} from '@angular/core';
-import {UserDataModel} from './core/model/user-data.model';
+import {UserDataInterface} from './core/interfaces/user-data.interface';
 import {UsersService} from './core/service/users.service';
 import {Subscription} from 'rxjs';
-import {SelectedUserModel} from './core/model/selected-user.model';
+import {SelectedUserInterface} from './core/interfaces/selected-user.interface';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +10,10 @@ import {SelectedUserModel} from './core/model/selected-user.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnDestroy {
-  public users: Array<UserDataModel> = [];
+  public users: Array<UserDataInterface> = [];
   public loading = false;
   public emptyUsersArrayMessage: string;
-  public selectedUsers: Array<SelectedUserModel> = [];
+  public selectedUsers: Array<SelectedUserInterface> = [];
   public inputValue: string;
   private searchUserSubscription: Subscription = new Subscription();
 
@@ -24,8 +24,8 @@ export class AppComponent implements OnDestroy {
     this.searchUserSubscription.unsubscribe();
   }
 
-  public selectUser(user: UserDataModel): void {
-    const newUser: SelectedUserModel = {
+  public selectUser(user: UserDataInterface): void {
+    const newUser: SelectedUserInterface = {
       id: user.id,
       name: user.name,
       date: new Date()
@@ -35,7 +35,7 @@ export class AppComponent implements OnDestroy {
     this.resetSearchState();
   }
 
-  public removeSelectedUser(user: SelectedUserModel): void {
+  public removeSelectedUser(user: SelectedUserInterface): void {
     const index = this.selectedUsers.indexOf(user);
     if (index > -1) {
       this.selectedUsers.splice(index, 1);
@@ -47,7 +47,7 @@ export class AppComponent implements OnDestroy {
       this.loading = true;
       this.resetSearchState();
       this.searchUserSubscription = this.userService.search(searchValue.target.value)
-        .subscribe((resp: Array<UserDataModel>) => {
+        .subscribe((resp: Array<UserDataInterface>) => {
           if (resp.length < 1) {
             this.emptyUsersArrayMessage = 'No similar item found!';
           }

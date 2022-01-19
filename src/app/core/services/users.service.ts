@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {UsersModel} from '../interfaces/user.interface';
 import {map} from 'rxjs/operators';
-import {UserDataInterface} from '../interfaces/user-data.interface';
+import { UserDataInterface } from '../interfaces/user-data.interface';
 
 @Injectable({
   providedIn: 'root'
