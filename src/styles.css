@@ -9,7 +9,8 @@ body{
   bottom:0;
   right:0;
   left:0;
-  font-family: palanquin , sans-serif;
+  font-family: sans-serif;
+  background-color: #eef0ff;
 }
 
 ::-webkit-scrollbar {

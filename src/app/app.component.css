@@ -8,11 +8,14 @@ ul{
 }
 
 .search-container{
+  position: relative;
+  top: 30%;
   max-width: 600px;
-  padding: 15px;
+  padding: 10px 30px;
   border-radius: 5px;
-  background-color: #e2e2e2;
+  background-color: #09146b;
   margin: auto;
+  box-shadow: 7px 7px 7px #0d197b85;
 }
 
 .input-container{
@@ -79,7 +82,7 @@ input {
   content: ' ';
   height: 15px;
   width: 2px;
-  background-color: #333;
+  background-color: #cecece;
 }
 
 .close-icon:before {
@@ -97,7 +100,7 @@ input {
 .items-list {
   background-color: white;
   max-height: 200px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .item {
@@ -115,20 +118,33 @@ input {
   line-height: 3.5;
 }
 
+.search-history > span , .date-container > span{
+  color: #cecece;
+}
+
+.search-history:last-child{
+  border-bottom: none;
+}
+
 .search-history-message{
   text-align: center;
 }
 
 .search-history-clear-btn{
-  text-decoration: #495057;
+  text-decoration: none;
   cursor: pointer;
   align-self: center;
   border: unset;
   background-color: unset;
   font-size: 14px;
+  color: #cecece;
 }
 .search-history-clear-btn:hover:not([disabled]) {
-  color: blue;
+  color: #8e8eff;
+}
+
+.search-history-clear-btn:disabled{
+  cursor: not-allowed;
 }
 
 .date-container{
@@ -136,4 +152,8 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+h1, h2,h3{
+  color: #cecece;
 }
