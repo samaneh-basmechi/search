@@ -1,12 +1,12 @@
-# ngx-image-cropper-sample (Angular)
-
+# Search
 ## Demo
 
 ![til](./src/assets/images/Demo.png)
 
 
 ## Demo Link
-https://search-and-acion.netlify.app
+
+https://search-and-action.netlify.app/
 
 
 ## Usage

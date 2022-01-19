@@ -1,8 +1,8 @@
 import {Component, OnDestroy} from '@angular/core';
 import {UserDataInterface} from './core/interfaces/user-data.interface';
-import {UsersService} from './core/service/users.service';
 import {Subscription} from 'rxjs';
 import {SelectedUserInterface} from './core/interfaces/selected-user.interface';
+import { UsersService } from './core/services/users.service';
 
 @Component({
   selector: 'app-root',
